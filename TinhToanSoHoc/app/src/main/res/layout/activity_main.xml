@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#99CCFF"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#FFC107"
+            android:gravity="center"
+            android:text="TÍNH TOÁN SỐ HỌC ĐƠN GIẢN"
+            android:textSize="20sp"/>
+
+        <!--NHập a-->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A = "
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:background="#FFFFFF"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/edtA"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:inputType="number"
+                android:padding="15dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <!--NHập b-->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B = "
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:background="#FFFFFF"
+                android:layout_marginRight="10dp"
+                />
+
+            <EditText
+                android:id="@+id/edtB"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                android:inputType="number"
+                android:padding="15dp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+
+        <!--Các buttons-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="Xuly_Cong"
+                android:text="+"
+                android:layout_weight="1"
+                android:backgroundTint="#00CC33"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnSub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="Xuly_Tru"
+                android:text="-"
+                android:layout_weight="1"
+                android:backgroundTint="#00CC33"
+                android:layout_marginEnd="8dp"
+                />
+
+            <Button
+                android:id="@+id/btnMul"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="Xuly_Nhan"
+                android:text="*"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#00CC33"/>
+
+            <Button
+                android:id="@+id/btnDiv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick="Xuly_Chia"
+                android:text="/"
+                android:layout_weight="1"
+                android:backgroundTint="#00CC33"/>
+
+        </LinearLayout>
+        <!--  Nút tính kết quả      -->
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="KẾT QUẢ"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#FFFFFF"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"/>
+
+        <!--  Ô hiển thị kết quả      -->
+        <TextView
+            android:id="@+id/tvResultValue"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:background="#FFFFFF"
+            android:layout_margin="20dp"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
