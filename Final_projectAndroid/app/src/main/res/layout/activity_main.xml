@@ -1,19 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
 
+    <!-- Tiêu đề -->
     <TextView
+        android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Chọn chức năng"
+        android:textSize="24sp"
+        android:layout_marginBottom="32dp"
+        android:gravity="center" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Gợi ý món ăn hàng ngày -->
+    <Button
+        android:id="@+id/btnSuggestRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gợi ý món ăn hàng ngày"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="@drawable/button_background" />
+
+    <!-- Tìm món ăn theo nhu cầu -->
+    <Button
+        android:id="@+id/btnSearchRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tìm món ăn theo nhu cầu"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="@drawable/button_background" />
+
+    <!-- Tính toán chi phí bữa ăn -->
+    <Button
+        android:id="@+id/btnCalculateCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tính toán chi phí bữa ăn"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="@drawable/button_background" />
+
+    <!-- Lưu trữ và chia sẻ công thức nấu ăn -->
+    <Button
+        android:id="@+id/btnSaveAndShareRecipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lưu trữ và chia sẻ công thức nấu ăn"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:background="@drawable/button_background" />
+
+</LinearLayout>
