@@ -23,10 +23,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="84dp"
-        android:text="Chiều cao:"
-        android:textSize="20sp"
+        android:layout_marginTop="92dp"
+        android:text="Chiều cao (cm) :"
+        android:textSize="15sp"
         app:layout_constraintEnd_toStartOf="@+id/edtHeight"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,10 +46,10 @@
         android:id="@+id/txtWeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="160dp"
-        android:text="Cân nặng:"
-        android:textSize="20sp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="164dp"
+        android:text="Cân nặng (kg):"
+        android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
