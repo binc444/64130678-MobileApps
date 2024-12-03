@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF9800"
+    android:background="#FFFFFF"
     android:padding="16dp">
 
 
@@ -21,38 +21,76 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/lbA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="A ="
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/edtA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/edtA"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:hint="Nhập số A"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lbA"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lbB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="B ="
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/edtB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtA" />
 
     <EditText
         android:id="@+id/edtB"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Nhập số B"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/lbB"
         app:layout_constraintTop_toBottomOf="@id/edtA" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:layout_marginBottom="28dp"
+        android:text="Chọn phép toán"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.012"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtB"
+        app:layout_constraintVertical_bias="0.375">
+
+    </TextView>
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:orientation="horizontal"
+        android:layout_marginTop="76dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtB">
 
@@ -61,28 +99,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="+" />
+            android:text="Cộng"
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/tru"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="-" />
+            android:text="Trừ"
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/nhan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="*" />
+            android:text="Nhân"
+            android:textSize="20sp" />
 
         <RadioButton
             android:id="@+id/chia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="/" />
+            android:text="Chia"
+            android:textSize="20sp" />
 
     </RadioGroup>
 
@@ -90,26 +132,25 @@
         android:id="@+id/btnTinhToan"
         android:layout_width="133dp"
         android:layout_height="62dp"
-        android:layout_marginTop="60dp"
-        android:backgroundTint="#00CC33"
-        android:text="Tính Toán"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Thực hiện"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/radioGroup" />
 
     <TextView
         android:id="@+id/tvKetQua"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:layout_marginBottom="152dp"
-        android:background="#FFFFFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Kết quả: ................"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.004"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTinhToan"
-        app:layout_constraintVertical_bias="0.728" />
+        app:layout_constraintTop_toBottomOf="@id/btnTinhToan"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
