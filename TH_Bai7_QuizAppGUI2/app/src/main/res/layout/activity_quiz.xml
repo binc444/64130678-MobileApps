@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_bai7" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="404dp"
+        android:layout_height="728dp"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- CardView hiển thị câu hỏi -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/questionCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#995D9BA4"
+            app:cardCornerRadius="20dp">
+
+            <TextView
+                android:id="@+id/question_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:gravity="center|top"
+                android:padding="16dp"
+                android:text="Question"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Đáp án A -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/answerCardA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#BF5D9BA4">
+
+            <TextView
+                android:id="@+id/answerA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Option"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Đáp án B -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/answerCardB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#BF5D9BA4">
+
+            <TextView
+                android:id="@+id/answerB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Option"
+                android:gravity="center"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Đáp án C -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/answerCardC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#BF5D9BA4">
+
+            <TextView
+                android:id="@+id/answerC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Option"
+                android:gravity="center"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Đáp án D -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/answerCardD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="#BF5D9BA4"
+            app:cardCornerRadius="12dp">
+
+            <TextView
+                android:id="@+id/answerD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="Option"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Button -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="Wrong.."
+            android:textColor="#FF0000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#266C75"
+            android:text="Next"
+            android:textColor="@color/black"
+            android:textSize="20sp">
+
+        </Button>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
