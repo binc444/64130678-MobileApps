@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Câu lệnh nào dùng để in ra màn hình trong Java?",
+    "options": ["System.out.println", "print", "echo", "printf"],
+    "correct_answer": "System.out.println"
+  },
+  {
+    "id": 2,
+    "question": "Kiểu dữ liệu nào dùng để lưu số nguyên trong Java?",
+    "options": ["int", "float", "char", "double"],
+    "correct_answer": "int"
+  },
+  {
+    "id": 3,
+    "question": "Câu lệnh khai báo biến trong Java là?",
+    "options": ["int x;", "x int;", "variable x;", "let x;"],
+    "correct_answer": "int x;"
+  },
+  {
+    "id": 4,
+    "question": "Lệnh nào dùng để kết thúc chương trình trong Java?",
+    "options": ["exit()", "return", "end", "System.exit()"],
+    "correct_answer": "System.exit()"
+  },
+  {
+    "id": 5,
+    "question": "Câu lệnh nào dùng để khai báo một mảng trong Java?",
+    "options": ["int[] arr;", "int arr[];", "array arr[];", "arr int[];"],
+    "correct_answer": "int[] arr;"
+  },
+  {
+    "id": 6,
+    "question": "Lớp nào dùng để khai báo một đối tượng trong Java?",
+    "options": ["Object", "Class", "Main", "String"],
+    "correct_answer": "Class"
+  },
+  {
+    "id": 7,
+    "question": "Câu lệnh nào dùng để kiểm tra điều kiện trong Java?",
+    "options": ["if", "for", "while", "switch"],
+    "correct_answer": "if"
+  },
+  {
+    "id": 8,
+    "question": "Java có hỗ trợ đa kế thừa không?",
+    "options": ["Có", "Không", "Chỉ qua interface", "Chỉ qua class"],
+    "correct_answer": "Không"
+  },
+  {
+    "id": 9,
+    "question": "Câu lệnh nào dùng để tạo một đối tượng trong Java?",
+    "options": ["new Object()", "create Object()", "Object()", "new ClassName()"],
+    "correct_answer": "new ClassName()"
+  },
+  {
+    "id": 10,
+    "question": "Câu lệnh nào để khai báo một chuỗi trong Java?",
+    "options": ["String s;", "char s;", "text s;", "string s;"],
+    "correct_answer": "String s;"
+  }
+]

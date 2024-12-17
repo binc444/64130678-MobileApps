@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "C++ được phát triển bởi ai?",
+    "options": ["Dennis Ritchie", "Bjarne Stroustrup", "James Gosling", "Guido van Rossum"],
+    "correct_answer": "Bjarne Stroustrup"
+  },
+  {
+    "id": 2,
+    "question": "Kiểu dữ liệu nào dùng để lưu số nguyên trong C++?",
+    "options": ["int", "float", "char", "string"],
+    "correct_answer": "int"
+  },
+  {
+    "id": 3,
+    "question": "Câu lệnh nào để in ra màn hình trong C++?",
+    "options": ["cout", "printf", "print", "System.out.println"],
+    "correct_answer": "cout"
+  },
+  {
+    "id": 4,
+    "question": "Câu lệnh để khai báo một mảng là?",
+    "options": ["array", "vector", "int[]", "set"],
+    "correct_answer": "int[]"
+  },
+  {
+    "id": 5,
+    "question": "C++ là ngôn ngữ gì?",
+    "options": ["Lập trình thủ tục", "Lập trình hướng đối tượng", "Lập trình hàm", "Cả hai đáp án đầu"],
+    "correct_answer": "Cả hai đáp án đầu"
+  },
+  {
+    "id": 6,
+    "question": "Câu lệnh nào dùng để trả về giá trị từ một hàm trong C++?",
+    "options": ["return", "yield", "output", "send"],
+    "correct_answer": "return"
+  },
+  {
+    "id": 7,
+    "question": "Khai báo con trỏ trong C++ sử dụng ký hiệu nào?",
+    "options": ["&", "*", "#", "@"],
+    "correct_answer": "*"
+  },
+  {
+    "id": 8,
+    "question": "Câu lệnh nào dùng để nhập dữ liệu từ bàn phím trong C++?",
+    "options": ["cin", "scanf", "input", "get"],
+    "correct_answer": "cin"
+  },
+  {
+    "id": 9,
+    "question": "Câu lệnh nào dùng để kết thúc chương trình trong C++?",
+    "options": ["exit", "quit", "return 0", "end"],
+    "correct_answer": "return 0"
+  },
+  {
+    "id": 10,
+    "question": "Kiểu dữ liệu nào trong C++ được sử dụng để lưu trữ ký tự?",
+    "options": ["int", "char", "float", "string"],
+    "correct_answer": "char"
+  }
+]

@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frameLayout"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -40,7 +41,7 @@
             android:layout_marginBottom="20dp">
 
             <TextView
-                android:id="@+id/questionText"
+                android:id="@+id/question_Java"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:padding="16dp"
@@ -61,7 +62,7 @@
             app:cardElevation="6dp">
 
             <TextView
-                android:id="@+id/answerTextA"
+                android:id="@+id/answerA_Java"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
@@ -80,7 +81,7 @@
             app:cardElevation="6dp">
 
             <TextView
-                android:id="@+id/answerTextB"
+                android:id="@+id/answerB_Java"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
@@ -99,7 +100,7 @@
             app:cardElevation="6dp">
 
             <TextView
-                android:id="@+id/answerTextC"
+                android:id="@+id/answerC_Java"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
@@ -118,7 +119,7 @@
             app:cardElevation="6dp">
 
             <TextView
-                android:id="@+id/answerTextD"
+                android:id="@+id/answerD_Java"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp"
@@ -129,6 +130,7 @@
 
         <!-- Button -->
         <Button
+            android:id="@+id/next_Java"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
