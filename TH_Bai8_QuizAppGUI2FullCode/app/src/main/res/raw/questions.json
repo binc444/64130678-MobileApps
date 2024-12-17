@@ -1,0 +1,77 @@
+[
+  {
+    "question": "What is the color of the sky?",
+    "options": ["Blue", "Red", "Green", "Yellow"],
+    "correct_answer": "Blue"
+  },
+  {
+    "question": "What sound does a cat make?",
+    "options": ["Meow", "Woof", "Moo", "Quack"],
+    "correct_answer": "Meow"
+  },
+  {
+    "question": "How many legs does a spider have?",
+    "options": ["6", "8", "10", "4"],
+    "correct_answer": "8"
+  },
+  {
+    "question": "Which animal is known as the king of the jungle?",
+    "options": ["Lion", "Tiger", "Elephant", "Monkey"],
+    "correct_answer": "Lion"
+  },
+  {
+    "question": "What is the opposite of up?",
+    "options": ["Down", "Left", "Right", "Sideways"],
+    "correct_answer": "Down"
+  },
+  {
+    "question": "What is 2 + 2?",
+    "options": ["4", "3", "5", "6"],
+    "correct_answer": "4"
+  },
+  {
+    "question": "Which fruit is yellow and curved?",
+    "options": ["Banana", "Apple", "Orange", "Grapes"],
+    "correct_answer": "Banana"
+  },
+  {
+    "question": "What do you call a baby dog?",
+    "options": ["Puppy", "Kitten", "Cub", "Calf"],
+    "correct_answer": "Puppy"
+  },
+  {
+    "question": "How many continents are there on Earth?",
+    "options": ["5", "6", "7", "8"],
+    "correct_answer": "7"
+  },
+  {
+    "question": "Which of these is a vegetable?",
+    "options": ["Carrot", "Banana", "Orange", "Apple"],
+    "correct_answer": "Carrot"
+  },
+  {
+    "question": "What is the largest planet in our solar system?",
+    "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+    "correct_answer": "Jupiter"
+  },
+  {
+    "question": "What is the shape of a basketball?",
+    "options": ["Square", "Circle", "Triangle", "Rectangle"],
+    "correct_answer": "Circle"
+  },
+  {
+    "question": "What do you call a person who writes books?",
+    "options": ["Artist", "Singer", "Writer", "Chef"],
+    "correct_answer": "Writer"
+  },
+  {
+    "question": "What do you use to write on a blackboard?",
+    "options": ["Pen", "Chalk", "Marker", "Paint"],
+    "correct_answer": "Chalk"
+  },
+  {
+    "question": "Which one is a primary color?",
+    "options": ["Green", "Purple", "Red", "Orange"],
+    "correct_answer": "Red"
+  }
+]
