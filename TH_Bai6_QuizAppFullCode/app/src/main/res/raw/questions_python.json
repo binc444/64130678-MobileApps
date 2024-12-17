@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "Câu lệnh nào dùng để in ra màn hình trong Python?",
+    "options": ["print()", "echo()", "println()", "output()"],
+    "correct_answer": "print()"
+  },
+  {
+    "id": 2,
+    "question": "Kiểu dữ liệu nào dùng để lưu số nguyên trong Python?",
+    "options": ["int", "float", "char", "string"],
+    "correct_answer": "int"
+  },
+  {
+    "id": 3,
+    "question": "Câu lệnh khai báo biến trong Python là?",
+    "options": ["x = 10", "int x = 10", "variable x = 10", "let x = 10"],
+    "correct_answer": "x = 10"
+  },
+  {
+    "id": 4,
+    "question": "Lệnh nào dùng để kết thúc chương trình trong Python?",
+    "options": ["exit()", "quit()", "break", "exit"],
+    "correct_answer": "exit()"
+  },
+  {
+    "id": 5,
+    "question": "Câu lệnh nào dùng để khai báo một danh sách (list) trong Python?",
+    "options": ["list = []", "array = []", "list()", "[]"],
+    "correct_answer": "list = []"
+  },
+  {
+    "id": 6,
+    "question": "Câu lệnh nào dùng để kiểm tra điều kiện trong Python?",
+    "options": ["if", "for", "while", "switch"],
+    "correct_answer": "if"
+  },
+  {
+    "id": 7,
+    "question": "Lệnh nào dùng để khai báo một hàm trong Python?",
+    "options": ["def", "function", "func", "method"],
+    "correct_answer": "def"
+  },
+  {
+    "id": 8,
+    "question": "Python có hỗ trợ đa kế thừa không?",
+    "options": ["Có", "Không", "Chỉ qua interface", "Chỉ qua class"],
+    "correct_answer": "Có"
+  },
+  {
+    "id": 9,
+    "question": "Câu lệnh nào dùng để tạo một đối tượng trong Python?",
+    "options": ["object = ClassName()", "ClassName.new()", "new ClassName()", "ClassName()"],
+    "correct_answer": "object = ClassName()"
+  },
+  {
+    "id": 10,
+    "question": "Câu lệnh nào để khai báo một chuỗi trong Python?",
+    "options": ["s = 'hello'", "s = 'hello'", "string s = 'hello'", "s = 'text'"],
+    "correct_answer": "s = 'hello'"
+  }
+]
