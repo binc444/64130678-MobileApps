@@ -1,4 +1,4 @@
-package ntu.hieutm.myapplication;
+package ntu.hieutm.GourmetBuddy;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
