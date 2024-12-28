@@ -9,4 +9,15 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+
+    <string-array name="gioi_tinh_array">
+        <item>Nam</item>
+        <item>Nữ</item>
+    </string-array>
+
+    <string-array name="tinh_trang_suc_khoe_array">
+        <item>Tốt</item>
+        <item>Bình thường</item>
+        <item>Yếu</item>
+    </string-array>
 </resources>
