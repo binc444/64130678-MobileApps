@@ -4,6 +4,16 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Ảnh nền -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="62dp"
+        android:contentDescription="Background Image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_home" />
+
     <!-- Nội dung chính -->
     <LinearLayout
         android:id="@+id/mainContent"
@@ -12,50 +22,128 @@
         android:orientation="vertical"
         android:padding="16dp"
         android:layout_above="@+id/bottomNavigation"
-        android:gravity="center">
+        android:gravity="center"> <!-- Lớp phủ làm tối nền để nội dung nổi bật -->
 
         <!-- Tiêu đề -->
         <TextView
             android:id="@+id/title_Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chọn chức năng"
-            android:textSize="24sp"
             android:layout_marginBottom="32dp"
-            android:gravity="center" />
+            android:gravity="center"
+            android:text="Chọn chức năng"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <!-- Gợi ý món ăn hàng ngày -->
-        <Button
-            android:id="@+id/btn_GoiYMonAn"
+        <!-- Gợi ý món ăn theo tình trạng sức khỏe -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_GoiYMonAn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gợi ý món ăn theo tình trạng sức khỏe"
-            android:textSize="18sp"
             android:layout_marginBottom="16dp"
-            android:padding="16dp"
-            android:background="@drawable/button_background" />
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
 
-        <!-- Tìm món ăn theo nhu cầu -->
-        <Button
-            android:id="@+id/btn_TimMonAn"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFD700"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/icon_GoiYMonAn"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Health Food Icon"
+                    android:src="@drawable/ic_health_food" />
+
+                <TextView
+                    android:id="@+id/text_GoiYMonAn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gợi ý món ăn theo tình trạng sức khỏe"
+                    android:textColor="#212121"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Gợi ý món ăn theo nhu cầu -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_TimMonAn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Gợi ý món ăn theo nhu cầu"
-            android:textSize="18sp"
             android:layout_marginBottom="16dp"
-            android:padding="16dp"
-            android:background="@drawable/button_background" />
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
 
-        <!-- Tìm món ăn theo nhu cầu -->
-        <Button
-            android:id="@+id/btn_CacMonAnCoSan"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFD700"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/icon_TimMonAn"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Food Search Icon"
+                    android:src="@drawable/ic_food_search" />
+
+                <TextView
+                    android:id="@+id/text_TimMonAn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gợi ý món ăn theo nhu cầu"
+                    android:textColor="#212121"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Các công thức nấu ăn có sẵn -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_CacMonAnCoSan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Các công thức nấu ăn có sẵn"
-            android:textSize="18sp"
             android:layout_marginBottom="16dp"
-            android:padding="16dp"
-            android:background="@drawable/button_background" />
+            app:cardCornerRadius="20dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFD700"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/icon_CacMonAnCoSan"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginEnd="12dp"
+                    android:contentDescription="Recipe Icon"
+                    android:src="@drawable/ic_recipe" />
+
+                <TextView
+                    android:id="@+id/text_CacMonAnCoSan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Các công thức nấu ăn có sẵn"
+                    android:textColor="#212121"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 
     <!-- Bottom Navigation View -->
@@ -65,5 +153,5 @@
         android:layout_height="62dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="1dp"
-        app:menu="@menu/menu"/>
+        app:menu="@menu/menu" />
 </RelativeLayout>
