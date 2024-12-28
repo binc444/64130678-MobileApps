@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DB_GourmetBuddy extends SQLiteOpenHelper {
 
-    private static final String DATABASE_NAME = "SmartRecipeApp.db";
+    private static final String DATABASE_NAME = "GourmetBuddy.db";
     private static final int DATABASE_VERSION = 1;
 
     // Các bảng
@@ -17,7 +17,6 @@ public class DB_GourmetBuddy extends SQLiteOpenHelper {
     public static final String TABLE_INGREDIENT = "ingredient";
     public static final String TABLE_RECIPE_INGREDIENT = "recipe_ingredient";
     public static final String TABLE_USER_RECIPE = "user_recipe";
-    public static final String TABLE_SHARED_RECIPE = "shared_recipe";
 
     // Các cột của bảng `user`
     public static final String COLUMN_USER_ID = "user_id";
@@ -67,11 +66,7 @@ public class DB_GourmetBuddy extends SQLiteOpenHelper {
     public static final String COLUMN_TEN_MON_USER = "ten_mon";
     public static final String COLUMN_NGUYEN_LIEU = "nguyen_lieu";
     public static final String COLUMN_HUONG_DAN_USER = "huong_dan";
-    public static final String COLUMN_QR_CODE = "qr_code";
 
-    // Các cột của bảng `shared_recipe`
-    public static final String COLUMN_SHARED_ID = "shared_id";
-    public static final String COLUMN_SHARED_BY = "shared_by";
 
     // SQL tạo các bảng
     private static final String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + " ("
@@ -129,16 +124,7 @@ public class DB_GourmetBuddy extends SQLiteOpenHelper {
             + COLUMN_TEN_MON_USER + " TEXT, "
             + COLUMN_NGUYEN_LIEU + " TEXT, "
             + COLUMN_HUONG_DAN_USER + " TEXT, "
-            + COLUMN_QR_CODE + " TEXT, "
             + "FOREIGN KEY(" + COLUMN_USER_ID_FK + ") REFERENCES " + TABLE_USER + "(" + COLUMN_USER_ID + "));";
-
-    private static final String CREATE_SHARED_RECIPE_TABLE = "CREATE TABLE " + TABLE_SHARED_RECIPE + " ("
-            + COLUMN_SHARED_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + COLUMN_RECIPE_ID + " INTEGER, "
-            + COLUMN_SHARED_BY + " INTEGER, "
-            + COLUMN_QR_CODE + " TEXT, "
-            + "FOREIGN KEY(" + COLUMN_RECIPE_ID + ") REFERENCES " + TABLE_RECIPE + "(" + COLUMN_RECIPE_ID + "), "
-            + "FOREIGN KEY(" + COLUMN_SHARED_BY + ") REFERENCES " + TABLE_USER + "(" + COLUMN_USER_ID + "));";
 
     public DB_GourmetBuddy(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -152,12 +138,10 @@ public class DB_GourmetBuddy extends SQLiteOpenHelper {
         db.execSQL(CREATE_INGREDIENT_TABLE);
         db.execSQL(CREATE_RECIPE_INGREDIENT_TABLE);
         db.execSQL(CREATE_USER_RECIPE_TABLE);
-        db.execSQL(CREATE_SHARED_RECIPE_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_SHARED_RECIPE);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER_RECIPE);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_RECIPE_INGREDIENT);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_INGREDIENT);
