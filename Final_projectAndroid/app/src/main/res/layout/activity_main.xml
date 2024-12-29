@@ -60,13 +60,13 @@
                     android:layout_height="70dp"
                     android:layout_marginEnd="12dp"
                     android:contentDescription="Health Food Icon"
-                    android:src="@drawable/ic_health_food" />
+                    android:src="@drawable/ic_ingredient" />
 
                 <TextView
                     android:id="@+id/text_GoiYMonAn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Gợi ý món ăn theo tình trạng sức khỏe"
+                    android:text="Gợi ý món ăn dựa trên nguyên liệu có sẵn"
                     android:textColor="#212121"
                     android:textSize="18sp"
                     android:textStyle="bold" />

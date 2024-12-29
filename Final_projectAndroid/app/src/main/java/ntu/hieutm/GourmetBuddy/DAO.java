@@ -111,5 +111,20 @@ public class DAO {
         return insertData(DB_GourmetBuddy.TABLE_USER_RECIPE, values);
     }
 
+    // Lấy thông tin người dùng theo ID
+    public Cursor getUserInfo(int userId) {
+        String selection = DB_GourmetBuddy.COLUMN_USER_ID + " = ?";
+        String[] selectionArgs = {String.valueOf(userId)};
 
+        // Truy vấn thông tin người dùng từ bảng user
+        return database.query(
+                DB_GourmetBuddy.TABLE_USER,
+                new String[]{DB_GourmetBuddy.COLUMN_TEN_DANG_NHAP, DB_GourmetBuddy.COLUMN_HO_TEN, DB_GourmetBuddy.COLUMN_NGAY_SINH, DB_GourmetBuddy.COLUMN_GIOI_TINH},
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+    }
 }
