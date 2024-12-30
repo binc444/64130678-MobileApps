@@ -2,44 +2,66 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FF6347">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Ảnh nền -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="62dp"
+        android:contentDescription="Background Image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_profile" />
     <!-- Nội dung chính -->
     <ScrollView
         android:id="@+id/mainContent_profile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottomNavigation"
+        android:layout_marginBottom="62dp"
         android:padding="16dp"
         android:fillViewport="true">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-        <LinearLayout
+        <!-- Thông tin người dùng -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông Tin Cá Nhân"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp" />
+
+        <!-- CardView cho Tên Đăng Nhập -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
-
-            <!-- Thông tin người dùng -->
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Thông Tin Cá Nhân"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
 
             <TextView
                 android:id="@+id/db_ten_dang_nhap"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
                 android:text="Tên Đăng Nhập: "
                 android:textSize="20sp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"
+                android:padding="16dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView cho Họ và Tên -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
 
             <TextView
                 android:id="@+id/db_ho_ten"
@@ -47,8 +69,17 @@
                 android:layout_height="wrap_content"
                 android:text="Họ và Tên: "
                 android:textSize="20sp"
-                android:layout_marginBottom="4dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"
+                android:padding="16dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView cho Ngày sinh -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
 
             <TextView
                 android:id="@+id/db_ngay_sinh"
@@ -56,8 +87,17 @@
                 android:layout_height="wrap_content"
                 android:text="Ngày sinh: "
                 android:textSize="20sp"
-                android:layout_marginBottom="4dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"
+                android:padding="16dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView cho Giới tính -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
 
             <TextView
                 android:id="@+id/db_gioi_tinh"
@@ -65,38 +105,19 @@
                 android:layout_height="wrap_content"
                 android:text="Giới tính: "
                 android:textSize="20sp"
-                android:layout_marginBottom="16dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/black"
+                android:padding="16dp"/>
+        </androidx.cardview.widget.CardView>
 
-
-            <!-- Danh sách món ăn đã lưu -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Món Ăn Đã Lưu"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/black"
-                android:layout_marginBottom="8dp" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/db_user_recipe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="vertical"
-                android:layout_marginBottom="16dp" >
-
-            </androidx.recyclerview.widget.RecyclerView>
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>
 
     <!-- Bottom Navigation View -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
-        app:menu="@menu/menu" />
+    android:id="@+id/bottomNavigation"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="1dp"
+    app:menu="@menu/menu" />
 </RelativeLayout>

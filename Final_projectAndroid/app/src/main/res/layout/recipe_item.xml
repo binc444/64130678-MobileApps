@@ -1,0 +1,87 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#FF6347">
+
+    <ImageView
+        android:id="@+id/iv_recipe_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_recipe_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên món ăn"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:background="#FFD700"/>
+
+    <TextView
+        android:id="@+id/tv_recipe_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh mục"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:background="#FFD700"/>
+
+    <TextView
+        android:id="@+id/tv_recipe_difficulty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Độ khó"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:background="#FFD700"/>
+
+    <TextView
+        android:id="@+id/tv_recipe_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thời gian"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:background="#FFD700"/>
+
+    <TextView
+        android:id="@+id/tv_recipe_servings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Khẩu phần"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:background="#FFD700"/>
+
+    <TextView
+        android:id="@+id/tv_recipe_health"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin sức khỏe"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:textColor="@color/black"
+        android:background="#FFD700"/>
+
+    <TextView
+        android:id="@+id/tv_recipe_instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hướng dẫn nấu ăn"
+        android:textSize="18sp"
+        android:padding="8dp"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/black"
+        android:background="#FFD700"/>
+
+</LinearLayout>

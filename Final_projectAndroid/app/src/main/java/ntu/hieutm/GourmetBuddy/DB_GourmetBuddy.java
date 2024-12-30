@@ -114,7 +114,7 @@ public class DB_GourmetBuddy extends SQLiteOpenHelper {
                 "('Bánh Xèo', 'Gia đình', 'Trung bình', 45, 4, 'Pha bột bánh xèo, chiên bánh với nhân tôm, thịt, giá đỗ, ăn kèm rau sống và nước mắm.', 'Không phù hợp cho người bị tiểu đường', 'banh_xeo')," +
                 "('Cá Kho Tộ', 'Gia đình', 'Trung bình', 60, 4, 'Kho cá với nước mắm, đường, tiêu và hành, ăn kèm cơm trắng.', 'Không phù hợp cho người bị cao huyết áp', 'ca_kho_to')," +
                 "('Nem Rán', 'Gia đình', 'Trung bình', 45, 4, 'Gói nem với nhân thịt, mộc nhĩ, miến, cà rốt, chiên vàng và ăn kèm nước chấm.', 'Không phù hợp cho người bị tiểu đường', 'nem_ran')," +
-                "('Bánh Cuốn', 'Gia đình', 'Dễ', 30, 4, 'Hấp bột bánh, cuốn nhân thịt băm, hành phi, ăn kèm nước mắm chua ngọt.', 'Phù hợp cho mọi người', 'banh_cuon')," +
+                "('Bánh Cuốn', 'Gia đình', 'Dễ', 30, 4, '   Hấp bột bánh, cuốn nhân thịt băm, hành phi, ăn kèm nước mắm chua ngọt.', 'Phù hợp cho mọi người', 'banh_cuon')," +
                 "('Canh Chua Cá', 'Gia đình', 'Trung bình', 40, 4, 'Nấu canh chua với cá, me, cà chua, dứa, và các loại rau.', 'Không phù hợp cho người bị dị ứng hải sản', 'canh_chua_ca')," +
                 "('Lẩu Thái', 'Gia đình', 'Nâng cao', 120, 6, 'Chuẩn bị nước lẩu cay, thêm tôm, mực, thịt bò, rau và nấm, ăn kèm bún hoặc mì.', 'Không phù hợp cho người bị dị ứng hải sản', 'lau_thai')," +
                 "('Bò Kho', 'Gia đình', 'Trung bình', 90, 4, 'Hầm bò với cà rốt, hành tây, nêm gia vị, ăn kèm bánh mì hoặc cơm.', 'Không phù hợp cho người bị tiểu đường', 'bo_kho')," +

@@ -2,15 +2,19 @@ package ntu.hieutm.GourmetBuddy;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
+    private CardView cardGoiYMonAn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,5 +46,17 @@ public class MainActivity extends AppCompatActivity {
             return false;
         });
 
+        // Khởi tạo các View
+        cardGoiYMonAn = findViewById(R.id.card_GoiYMonAn);
+
+        // sự kiện nhấn CardView
+        cardGoiYMonAn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển
+                Intent intent = new Intent(MainActivity.this, FoodForHealthActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
