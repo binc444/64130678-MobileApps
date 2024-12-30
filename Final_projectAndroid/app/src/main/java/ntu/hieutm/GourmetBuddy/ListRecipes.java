@@ -1,122 +1,43 @@
 package ntu.hieutm.GourmetBuddy;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 
 import java.util.List;
 
 public class ListRecipes extends AppCompatActivity {
 
-    private RecyclerView rvRecipes;
-    private RecipeAdapter recipeAdapter;
-    private List<Recipe> recipes;
+    private RecyclerView rvRecipes;  // RecyclerView để hiển thị danh sách các món ăn
+    private RecipeAdapter recipeAdapter;  // Adapter để quản lý dữ liệu trong RecyclerView
+    private List<Recipe> recipes;  // Danh sách các món ăn (recipes)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_recipes);
+        setContentView(R.layout.activity_list_recipes);  // Thiết lập giao diện người dùng
 
         rvRecipes = findViewById(R.id.rv_recipes);
+
+        // Thiết lập LayoutManager cho RecyclerView, để hiển thị danh sách theo kiểu dọc
         rvRecipes.setLayoutManager(new LinearLayoutManager(this));
 
+        // Lấy danh sách các món ăn từ Intent
         recipes = getIntent().getParcelableArrayListExtra("recipes");
+
+        // Nếu danh sách món ăn rỗng hoặc null, thông báo cho người dùng và dừng tiếp tục
         if (recipes == null || recipes.isEmpty()) {
             Toast.makeText(this, "Danh sách món ăn trống!", Toast.LENGTH_SHORT).show();
             return;
         }
 
+        // Tạo và thiết lập Adapter cho RecyclerView
         recipeAdapter = new RecipeAdapter(this, recipes);
         rvRecipes.setAdapter(recipeAdapter);
     }
 
-    private class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
-        private Context context;
-        private List<Recipe> recipes;
-
-        public RecipeAdapter(Context context, List<Recipe> recipes) {
-            this.context = context;
-            this.recipes = recipes;
-        }
-
-        @NonNull
-        @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(context).inflate(R.layout.recipe_item, parent, false);
-            return new ViewHolder(view);
-        }
-
-        @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            Recipe recipe = recipes.get(position);
-            holder.tvRecipeName.setText(recipe.getName());
-            holder.tvRecipeCategory.setText("Danh mục: " + recipe.getCategory());
-            holder.tvRecipeDifficulty.setText("Độ khó: " + recipe.getDifficulty());
-            holder.tvRecipeTime.setText("Thời gian: " + recipe.getTime() + " phút");
-            holder.tvRecipeServings.setText("Khẩu phần: " + recipe.getServings());
-            holder.tvRecipeHealth.setText("Sức khỏe: " + recipe.getHealthInfo());
-            holder.tvRecipeInstructions.setText("Hướng dẫn: " + recipe.getInstructions());
-
-            // Lấy ID từ drawable
-            int resourceId = context.getResources().getIdentifier(recipe.getImageUrl(), "drawable", context.getPackageName());
-
-            if (resourceId != 0) {
-                // Tạo URI từ drawable resource
-                String uri = "android.resource://" + context.getPackageName() + "/" + resourceId;
-                Glide.with(context)
-                        .load(uri)
-                        .placeholder(R.drawable.placeholder_image)
-                        .error(R.drawable.placeholder_image)
-                        .into(holder.ivRecipeImage);
-            } else {
-                holder.ivRecipeImage.setImageResource(R.drawable.placeholder_image);
-            }
-
-            // Thêm sự kiện nhấn vào ảnh
-            holder.ivRecipeImage.setOnClickListener(v -> {
-                Intent intent = new Intent(context, DetailRecipeActivity.class);
-                intent.putExtra("recipe", recipe); // Gửi đối tượng Recipe qua Intent
-                context.startActivity(intent);
-            });
-        }
-
-
-
-        @Override
-        public int getItemCount() {
-            return recipes.size();
-        }
-
-        private class ViewHolder extends RecyclerView.ViewHolder {
-            TextView tvRecipeName, tvRecipeCategory, tvRecipeDifficulty, tvRecipeTime, tvRecipeServings, tvRecipeHealth, tvRecipeInstructions;
-            ImageView ivRecipeImage;
-
-            public ViewHolder(@NonNull View itemView) {
-                super(itemView);
-                tvRecipeName = itemView.findViewById(R.id.tv_recipe_name);
-                tvRecipeCategory = itemView.findViewById(R.id.tv_recipe_category);
-                tvRecipeDifficulty = itemView.findViewById(R.id.tv_recipe_difficulty);
-                tvRecipeTime = itemView.findViewById(R.id.tv_recipe_time);
-                tvRecipeServings = itemView.findViewById(R.id.tv_recipe_servings);
-                tvRecipeHealth = itemView.findViewById(R.id.tv_recipe_health);
-                tvRecipeInstructions = itemView.findViewById(R.id.tv_recipe_instructions);
-                ivRecipeImage = itemView.findViewById(R.id.iv_recipe_image);
-            }
-        }
-
-
-    }
 }

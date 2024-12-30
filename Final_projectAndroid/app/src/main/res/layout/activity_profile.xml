@@ -39,6 +39,7 @@
 
         <!-- CardView cho Tên Đăng Nhập -->
         <androidx.cardview.widget.CardView
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -57,6 +58,7 @@
 
         <!-- CardView cho Họ và Tên -->
         <androidx.cardview.widget.CardView
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -75,6 +77,7 @@
 
         <!-- CardView cho Ngày sinh -->
         <androidx.cardview.widget.CardView
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -93,6 +96,7 @@
 
         <!-- CardView cho Giới tính -->
         <androidx.cardview.widget.CardView
+            android:background="@color/white"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
