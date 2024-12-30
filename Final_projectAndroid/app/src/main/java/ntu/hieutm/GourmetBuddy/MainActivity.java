@@ -13,7 +13,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
-    private CardView cardGoiYMonAn, cardCacMonAnCoSan;
+    private CardView cardGoiYMonAn, cardCacMonAnCoSan, cardTimMonAn;
 
 
     @Override
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         // Khởi tạo các View
         cardGoiYMonAn = findViewById(R.id.card_GoiYMonAn);
         cardCacMonAnCoSan = findViewById(R.id.card_CacMonAnCoSan);
+        cardTimMonAn = findViewById(R.id.card_TimMonAn);
 
         // sự kiện nhấn CardView
         cardGoiYMonAn.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Chuyển
                 Intent intent = new Intent(MainActivity.this, FoodAvailableActivity.class);
+                startActivity(intent);
+            }
+        });
+        cardTimMonAn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Chuyển
+                Intent intent = new Intent(MainActivity.this, FoodOnDemandActivity.class);
                 startActivity(intent);
             }
         });

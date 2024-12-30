@@ -1,10 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FoodOnDemandActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_demand">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn độ khó"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:background="#FFd700"
+        android:id="@+id/rg_difficulty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton android:id="@+id/rb_easy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dễ" />
+        <RadioButton android:id="@+id/rb_medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trung bình" />
+        <RadioButton android:id="@+id/rb_hard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Khó" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn mục tiêu sức khỏe"
+        android:textSize="25sp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:background="#FFd700"
+        android:id="@+id/rg_health_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton android:id="@+id/rb_family" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gia đình" />
+        <RadioButton android:id="@+id/rb_gain_muscle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ăn chay" />
+        <RadioButton android:id="@+id/rb_an_chay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tăng cơ" />
+        <RadioButton android:id="@+id/rb_lose_weight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Giảm cân" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#FFD700"
+        android:text="Chọn"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:strokeWidth="2dp" />
+</LinearLayout>
