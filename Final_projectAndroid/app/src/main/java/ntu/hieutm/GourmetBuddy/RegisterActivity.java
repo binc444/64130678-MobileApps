@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
     private Button registerButton;
     private DAO dao;
     private RadioGroup genderRadioGroup;
+    private TextView loginLink;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
         birthdayEditText = findViewById(R.id.birthdayEditText);
         registerButton = findViewById(R.id.registerButton);
         genderRadioGroup = findViewById(R.id.genderRadioGroup);
+        loginLink = findViewById(R.id.loginLink);
 
         dao = new DAO(this);
         dao.open();
@@ -67,6 +70,15 @@ public class RegisterActivity extends AppCompatActivity {
                         Toast.makeText(RegisterActivity.this, "Tên đăng nhập đã tồn tại!", Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+
+        // Sự kiện đăng nhập
+        loginLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
     }

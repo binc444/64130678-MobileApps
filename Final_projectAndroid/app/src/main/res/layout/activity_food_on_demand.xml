@@ -14,15 +14,36 @@
         android:textColor="@color/white"
         android:layout_marginBottom="8dp" />
 
-    <RadioGroup
-        android:background="#FFd700"
-        android:id="@+id/rg_difficulty"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RadioButton android:id="@+id/rb_easy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dễ" />
-        <RadioButton android:id="@+id/rb_medium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trung bình" />
-        <RadioButton android:id="@+id/rb_hard" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Khó" />
-    </RadioGroup>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:padding="8dp"
+        android:backgroundTint="#FFD700">
+
+        <RadioGroup
+            android:id="@+id/rg_difficulty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb_easy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dễ" />
+            <RadioButton
+                android:id="@+id/rb_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trung bình" />
+            <RadioButton
+                android:id="@+id/rb_hard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khó" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,16 +54,41 @@
         android:textColor="@color/white"
         android:layout_marginBottom="8dp" />
 
-    <RadioGroup
-        android:background="#FFd700"
-        android:id="@+id/rg_health_category"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RadioButton android:id="@+id/rb_family" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Gia đình" />
-        <RadioButton android:id="@+id/rb_gain_muscle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ăn chay" />
-        <RadioButton android:id="@+id/rb_an_chay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tăng cơ" />
-        <RadioButton android:id="@+id/rb_lose_weight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Giảm cân" />
-    </RadioGroup>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:padding="8dp"
+        android:backgroundTint="#FFD700">
+
+        <RadioGroup
+            android:id="@+id/rg_health_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rb_family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gia đình" />
+            <RadioButton
+                android:id="@+id/rb_gain_muscle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ăn chay" />
+            <RadioButton
+                android:id="@+id/rb_an_chay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tăng cơ" />
+            <RadioButton
+                android:id="@+id/rb_lose_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giảm cân" />
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/btn_select"
